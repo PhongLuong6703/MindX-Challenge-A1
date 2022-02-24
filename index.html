@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>MindX Challenge A1</title>
+</head>
+
+<body>
+    <h1>MindX Challenge A1</h1>
+    <script>
+        function findOppositeNumber(n, inputNumber) {
+            let N = Number(n);
+            let InputNumber = Number(inputNumber);
+            if (N % 2 == 0 && 4 <= N <= 20 && 0 <= InputNumber <= N) {
+                let avg = N / 2;
+                if (InputNumber < avg) {
+                    let oppositeNumber = avg + InputNumber;
+                    console.log(`Opposite Number is: ${oppositeNumber}`);
+                } else {
+                    oppositeNumber = InputNumber - avg;
+                    console.log(`Opposite Number is: ${oppositeNumber}`);
+                }
+                return true;
+            } else {
+                console.log("Your numbers is not valid. Please try again!");
+            }
+        }
+        findOppositeNumber(10, 2);
+        findOppositeNumber(10, 6);
+        findOppositeNumber(14, 6);
+    </script>
+</body>
+
+</html>
